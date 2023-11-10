@@ -24,6 +24,7 @@ public class CustomConnect : MonoBehaviourPunCallbacks
             if (!CoolDown)
             {
             CustomVRManager.CustomServerConnect(CustomServerIds, CustomVoiceIds, ServerName);
+                StartCoroutine(Cooldown());
             CanTrigger = true;
             }
         }
